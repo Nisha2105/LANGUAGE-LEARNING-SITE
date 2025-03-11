@@ -42,7 +42,13 @@ export const NavBar2 = () => {
             <Nav.Link href="#java" className={activeLink === 'java' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('java')}>JAVA</Nav.Link>
             <Nav.Link href="#c" className={activeLink === 'c' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('c')}>C</Nav.Link>
             <Nav.Link href="#cpp" className={activeLink === 'cpp' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('cpp')}>C++</Nav.Link>
+            <Nav.Link href="#c#" className={activeLink === 'c#' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('c#')}>C#</Nav.Link>
             <Nav.Link href="#sql" className={activeLink === 'sql' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('sql')}>SQL</Nav.Link>
+            <Nav.Link href="#mysql" className={activeLink === 'mysql' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('mysql')}>MYSQL</Nav.Link>
+            <Nav.Link href="#reactjs" className={activeLink === 'reactjs' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('reactjs')}>REACT.JS</Nav.Link>
+            <Nav.Link href="#nodejs" className={activeLink === 'nodejs' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('nodejs')}>NODE.JS</Nav.Link>
+            <Nav.Link href="#django" className={activeLink === 'django' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('django')}>DJANGO</Nav.Link>
+            <Nav.Link href="#dsa" className={activeLink === 'dsa' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('dsa')}>DSA</Nav.Link>
          </Nav>
 
         </Navbar.Collapse>
