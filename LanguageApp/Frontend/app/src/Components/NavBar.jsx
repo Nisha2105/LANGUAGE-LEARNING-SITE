@@ -42,16 +42,11 @@ export const NavBar = () => {
         </Navbar.Toggle>
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#html" className={activeLink === 'html' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('html')}>HTML</Nav.Link>
-            <Nav.Link href="#css" className={activeLink === 'css' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('css')}>CSS</Nav.Link>
-            <Nav.Link href="#javascript" className={activeLink === 'javascript' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('javascript')}>JAVASCRIPT</Nav.Link>
-            <Nav.Link href="#php" className={activeLink === 'php' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('php')}>PHP</Nav.Link>
-            <Nav.Link href="#python" className={activeLink === 'python' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('python')}>PYTHON</Nav.Link>
-            <Nav.Link href="#java" className={activeLink === 'java' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('java')}>JAVA</Nav.Link>
-            <Nav.Link href="#c" className={activeLink === 'c' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('c')}>C</Nav.Link>
-            <Nav.Link href="#cpp" className={activeLink === 'cpp' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('cpp')}>C++</Nav.Link>
-            <Nav.Link href="#sql" className={activeLink === 'sql' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('sql')}>SQL</Nav.Link>
-         </Nav>
+            <Nav.Link href="#html" className={activeLink === 'html' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('html')}>TUTORIALS</Nav.Link>
+            <Nav.Link href="#css" className={activeLink === 'css' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('css')}>EXERCISES</Nav.Link>
+            <Nav.Link href="#javascript" className={activeLink === 'javascript' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('javascript')}>CERTIFICATES</Nav.Link>
+            <Nav.Link href="#php" className={activeLink === 'php' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('php')}>SERVICES</Nav.Link>
+           </Nav>
           <span className='navbar-text'>
             <div className='social-icon'>
                 <a href="#"><img src={navIcon1} alt="" /></a>
