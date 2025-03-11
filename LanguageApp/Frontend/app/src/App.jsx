@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import reactLogo from './assets/react.svg';
 import { NavBar } from './Components/NavBar';
-import { Nav2 } from './Components/Nav2';
+import { NavBar2 } from './Components/NavBar2';
 import {Banner} from './Components/Banner';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -11,7 +11,7 @@ function App() {
     <>
       <div className="App">
         <NavBar />
-        <Nav2 />
+        <NavBar2 />
         <Banner />
       </div>
     </>

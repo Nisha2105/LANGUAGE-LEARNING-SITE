@@ -42,10 +42,10 @@ export const NavBar = () => {
         </Navbar.Toggle>
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#html" className={activeLink === 'html' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('html')}>TUTORIALS</Nav.Link>
-            <Nav.Link href="#css" className={activeLink === 'css' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('css')}>EXERCISES</Nav.Link>
-            <Nav.Link href="#javascript" className={activeLink === 'javascript' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('javascript')}>CERTIFICATES</Nav.Link>
-            <Nav.Link href="#php" className={activeLink === 'php' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('php')}>SERVICES</Nav.Link>
+            <Nav.Link href="#tutorials" className={activeLink === 'tutorials' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('tutorials')}>Tutorials</Nav.Link>
+            <Nav.Link href="#exercises" className={activeLink === 'exercises' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('exercises')}>Exercises</Nav.Link>
+            <Nav.Link href="#certificates" className={activeLink === 'certificates' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('certificates')}>Certificates</Nav.Link>
+            <Nav.Link href="#services" className={activeLink === 'services' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('services')}>Services</Nav.Link>
            </Nav>
           <span className='navbar-text'>
             <div className='social-icon'>

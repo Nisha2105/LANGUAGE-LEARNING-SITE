@@ -2,14 +2,9 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { useState, useEffect } from 'react';
+import './NavBar2.css';
 
-import navIcon1 from '../assets/img/nav-icon1.svg';
-import navIcon2 from '../assets/img/nav-icon2.svg';
-import navIcon3 from '../assets/img/nav-icon3.svg';
-import logo from '../assets/img/logo.svg';
-import './NaV2.css';
-
-export const Nav2 = () => {
+export const NavBar2 = () => {
     const [activeLink, setActiveLink] = useState('home');
     const [scrolled, seScrolled] = useState(false);
     
@@ -31,7 +26,7 @@ export const Nav2 = () => {
         setActiveLink(value);
     }
   return (
-    <Navbar expand="lg" className={scrolled ? "scrolled": ""}>
+    <Navbar expand="lg" className={`navbar2 ${scrolled ? "scrolled": ""}`}>
       <Container>
         
         <Navbar.Toggle aria-controls="basic-navbar-nav" >
@@ -49,11 +44,11 @@ export const Nav2 = () => {
             <Nav.Link href="#cpp" className={activeLink === 'cpp' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('cpp')}>C++</Nav.Link>
             <Nav.Link href="#sql" className={activeLink === 'sql' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('sql')}>SQL</Nav.Link>
          </Nav>
-          
+
         </Navbar.Collapse>
       </Container>
     </Navbar>
   );
 }
 
-export default Nav2;
+export default NavBar2;
