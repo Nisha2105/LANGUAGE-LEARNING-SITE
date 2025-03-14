@@ -1,10 +1,14 @@
+import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
+import {Navbar} from "react-bootstrap";
 import { useState, useEffect } from 'react';
-import './NavBar2.css';
+import './Navbar2.css';
+import { Link } from 'react-router-dom';
+import Html from '../Pages/Html';
+import Css from '../Pages/Css';
 
-export const NavBar2 = () => {
+export const Navbar2 = () => {
     const [activeLink, setActiveLink] = useState('home');
     const [scrolled, seScrolled] = useState(false);
     
@@ -28,14 +32,13 @@ export const NavBar2 = () => {
   return (
     <Navbar expand="lg" className={`navbar2 ${scrolled ? "scrolled": ""}`}>
       <Container>
-        
         <Navbar.Toggle aria-controls="basic-navbar-nav" >
             <span className='navbar-toggler-icon'></span>
         </Navbar.Toggle>
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#html" className={activeLink === 'html' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('html')}>HTML</Nav.Link>
-            <Nav.Link href="#css" className={activeLink === 'css' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('css')}>CSS</Nav.Link>
+            <Nav.Link as="div" className={activeLink === 'html' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('html')}><Link to="/html" className="navbar-link">HTML</Link></Nav.Link>
+            <Nav.Link as="div" className={activeLink === 'css' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('css')}><Link to="/css" className="navbar-link">CSS</Link></Nav.Link>
             <Nav.Link href="#javascript" className={activeLink === 'javascript' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('javascript')}>JAVASCRIPT</Nav.Link>
             <Nav.Link href="#php" className={activeLink === 'php' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('php')}>PHP</Nav.Link>
             <Nav.Link href="#python" className={activeLink === 'python' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('python')}>PYTHON</Nav.Link>
@@ -50,11 +53,10 @@ export const NavBar2 = () => {
             <Nav.Link href="#django" className={activeLink === 'django' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('django')}>DJANGO</Nav.Link>
             <Nav.Link href="#dsa" className={activeLink === 'dsa' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('dsa')}>DSA</Nav.Link>
          </Nav>
-
         </Navbar.Collapse>
       </Container>
     </Navbar>
   );
 }
 
-export default NavBar2;
+export default Navbar2;

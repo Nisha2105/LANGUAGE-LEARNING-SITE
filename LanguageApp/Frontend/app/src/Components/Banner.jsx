@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Container from "react-bootstrap/esm/Container";
 import {Row, Col } from "react-bootstrap";
+import Carousel from 'react-bootstrap/Carousel';
 import { ArrowRightCircle } from "react-bootstrap-icons";
 import headerImg from "../assets/img/header-img.svg";
 
@@ -21,7 +22,6 @@ export const Banner = () => {
                     </Col>
                 </Row>
             </Container>
-
         </section>
 
     )

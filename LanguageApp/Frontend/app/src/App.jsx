@@ -1,21 +1,22 @@
-import { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import { NavBar } from './Components/NavBar';
-import { NavBar2 } from './Components/NavBar2';
-import {Banner} from './Components/Banner';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import { Routes, Route } from 'react-router-dom';
+import Home from './Pages/Home';
+import Html from './Pages/Html';
+import Css from './Pages/Css';
+import { Navbar } from 'react-bootstrap';
+import NavBar from './Components/NavBar';
 
-function App() {
+const App = () => {
+   return (
+      <>
+      <Navbar/>
+         <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/html" element={<Html />} />
+            <Route path="/css" element={<Css />} />
+            
+         </Routes>
+      </>
+   );
+};
 
-  return (
-    <>
-      <div className="App">
-        <NavBar />
-        <NavBar2 />
-        <Banner />
-      </div>
-    </>
-  )
-}
-
-export default App
+export default App;
