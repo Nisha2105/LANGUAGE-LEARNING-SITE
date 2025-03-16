@@ -1,13 +1,12 @@
 .main{
     display: flex;
     justify-content: center;
-    background: url("./image/background2.jpg") ;
+    align-items: center;
+    background: url("../assets/img/bg-image.jpg") ;
     background-size: cover;
-    height: 565px;
-    width: 800px;
-    position: relative;
-    margin-left: 200px;
-    margin-top: 0px;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
 
     
 }
@@ -19,7 +18,7 @@
     width: 300px;
     background-color: aliceblue;
     border-radius: 20px;
-    border: 2px solid rgb(50, 50, 50);
+    border: 2px solid rgb(128, 128, 128);
     margin-top: 80px;
     margin-bottom: 50px;
     background: transparent;
@@ -79,28 +78,29 @@ top: -20px;
     color: rgb(247, 249, 252);
     font-size: small;
 }
+
 .btn{
     display: flex;
     justify-content: center;
     padding-top: 8px;
     width: 200px;
     height: 35px;
-    border-radius: 20px;
+    border-radius: 20px !important;
     border: none;
     font-size: 15px;
     text-align: center;
     color: aliceblue;
-    background-color: rgb(247, 249, 252);
+    background-color: rgb(127, 179, 224) !important;
     position: relative;
     margin-top: 10px;
+    margin-left: 25px;
 }
-
 
 .sign{
     display: flex;
     justify-content: center;
     position: relative;
-    top: -9px;
+    top: 5px;
     font-size: small;
 
 }

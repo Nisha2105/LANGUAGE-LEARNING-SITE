@@ -44,7 +44,7 @@
     padding: 0;
     width: 100%;
     margin-top: 60px;
-    z-index: 99;
+    z-index: 9999;
     transition:  0.32s ease-in-out; 
   }
   .navbar2 {
@@ -55,22 +55,28 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /*overflow-x: auto;
-    white-space: nowrap;
-    scrollbar-width:none;
-    -ms-overflow-style: none;*/
     padding: 10px 20px;
-    
   }
   .navbar2.scrolled {
-    padding: 0px 0;
-    background-color: #121212;
+    background-color: transparent;
   }
+  a {
+    font-weight: 500;
+    color: #fff; 
+    text-decoration: none;
+  }
+  a:hover, a.active{
+    color: #fff; 
+    text-decoration: none;
+    opacity: 1;
+  }
+
   .navbar2 .nav-link{
     font-weight: 400;
-    color: #fff !important;
-    letter-spacing: 0.1px;         /*changes*/
-    padding: 0 18px;             /*changes*/
+    color: #fff ;
+    letter-spacing: 0.2px !important;         
+    padding: 0 18px; 
+    margin: 0 10px;            
     font-size: 18px;
     opacity: 0.75;
   }
