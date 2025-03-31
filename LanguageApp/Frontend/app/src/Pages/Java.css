@@ -1,9 +1,5 @@
-.css {
+.java{
     font-family: Arial, sans-serif;
-    background-image: url('../assets/img/bg-image.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
     color: #ddd;
     margin: 0;
     padding: 0;
@@ -11,10 +7,10 @@
     display: flex;
     overflow-y: auto;
     flex-direction: column;
-    
+    background-position: fixed;
+    margin-top: 113px;
   }
-    
-  .css .navbar-title {
+  .java .navbar-title {
     display: flex;
     align-items: center;
     justify-content: center; 
@@ -22,14 +18,12 @@
     border-bottom: 3px solid #fff; 
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); 
     transition: transform 0.3s ease-in-out;
-    
   }
-   
-  .css .navbar-title:hover{
+    
+  .java .navbar-title:hover{
     transform: scale(1.05);
   }
-  
-  .css h1 {
+  .java h1 {
     font-family: 'Poppins', sans-serif; 
     font-size: 24px;
     font-weight: bold;
@@ -38,37 +32,33 @@
     letter-spacing: 2px; 
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
   }
-  
-  .css .navbar{
+    
+  .java .navbar{
     width: 220px;
     overflow-y: auto;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.5);
     overflow-x: auto;
     padding: 15px;
     left: 0;
-    margin-top: 113px;      /*changes*/
     display: flex;
     flex-direction: column;
     text-align: center;
     position: fixed;
   }
-  
-  .css .navbar ul {
+  .java  .navbar ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
     display: block;
     flex-grow: 1;
   }
-  
-  .css .navbar ul li {
+  .java .navbar ul li {
     display: block;
     margin: 0 15px;
     text-align: left;
     width: 100%;
   }
-  
-  .css .navbar a {
+  .java .navbar a {
     color: #ffffff;
     text-decoration: none;
     font-size: 18px;
@@ -77,19 +67,35 @@
     padding: 12px 20px;
     transition: 0.3s;
   }
-  
-  .css .navbar a:hover {
+  .java .navbar a:hover {
     color: #92afd5;
     padding-left: 25px;
   }
-
-  .css main{
+  .java main{
     margin-left: 240px;
     padding: 20px;
     min-height: 100vh;
-    color: #2c2c41;
     box-sizing: border-box;
+    color: #2c2c41;
     display: flex;
     flex-direction: column;
-    margin-top: 113px;   /* changes*/
+    
+  }
+  .java .container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #101011;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+  }
+  .java pre {
+    background-color: rgba(0,0,0,0.6);
+    padding: 15px;
+    border-radius: 5px;
+    font-family: monospace;
+    white-space: pre-wrap;
+    color: #bdcee0;
+    overflow-x: auto;
+    box-shadow: inset 0 0 10px rgba(196, 176, 176, 0.1);
   }

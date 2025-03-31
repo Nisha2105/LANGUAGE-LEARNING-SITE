@@ -1,40 +1,27 @@
 import React from 'react';
-import './Signup.css';
+import '../pages/Signup.css';
 
-const SignUp = () => {
-return(
-<>
-  
-  <div className="main">
-    <div className="form">
-      <form>
-        <span>
-          <h1>Sign Up</h1>
-        </span>
-        <div className="username">
-          <input type="text" placeholder="Username" />
-          <hr />
+const Signup = () => {
+    return(
+        <div className='signup'>
+            
+            <form>
+            <h2>Get in Touch</h2>
+                <div className='input-row'>
+                    <input type='text' placeholder='First name' required/>
+                    <input type='text' placeholder='Last name' />
+                </div>
+                <div className='input-row'>
+                    <input type='email' placeholder='Email Address' required/>
+                    <input type='tel' placeholder='Mobile No.' />
+                </div>
+                <button type='submit'>Submit</button>
+                <div className='login-option'>
+                    <p>Already have an account? LOGIN</p>
+                </div>
+            </form>
         </div>
-        <br />
-        <br />
-        <div className="password">
-          <input type="text" placeholder="Password" />
-          <hr />
-          <br />
-          <br />
-        </div>
-        <p className="forget">Forget Password?</p>
-        <div>
-          <button className="btn" type="submit">
-            <b>Sign Up</b>
-          </button>
-        </div>
-        
-      </form>
-    </div>
-  </div>
-</>
-);
+    )
 }
 
-export default SignUp;
+export default Signup;

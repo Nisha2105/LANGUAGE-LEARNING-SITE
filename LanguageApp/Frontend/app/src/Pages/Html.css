@@ -38,14 +38,14 @@
 }
   
 .html .navbar{
+  display: flex;
   width: 220px;
   overflow-y: auto;
   background-color: rgba(0, 0, 0, 0.7);
   overflow-x: auto;
   padding: 15px;
   left: 0;
-  margin-top: 53px;   /*changes*/
-  display: flex;
+  margin-top: 113px;   /*changes*/
   flex-direction: column;
   text-align: center;
   position: fixed;
@@ -85,10 +85,11 @@
   margin-left: 240px;
   padding: 20px;
   min-height: 100vh;
+  color: #2c2c41;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  margin-top: 40px;   /* changes*/
+  margin-top: 113px;   /* changes*/
 }
  
 .html .container {
