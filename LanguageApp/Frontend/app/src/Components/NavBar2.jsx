@@ -6,7 +6,6 @@ import { useState, useEffect } from 'react';
 import './Navbar2.css';
 import { Link } from 'react-router-dom';
 import Html from '../pages/Html';
-import Css from '../pages/Css';
 
 export const Navbar2 = () => {
     const [activeLink, setActiveLink] = useState('home');
