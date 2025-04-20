@@ -3,7 +3,8 @@
 .select-language-container {
   background-color: #121212;
   color: #fff;
-  min-height: 100vh;
+
+  min-width: 100vw;
   padding: 2rem;
   margin-top: 105px;
   text-align: center;

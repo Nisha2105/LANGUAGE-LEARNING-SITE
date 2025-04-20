@@ -3,9 +3,9 @@ import mongoose from 'mongoose';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import cookieParser from 'cookie-parser';
-
+import courseRoutes from './routes/courseRoutes.js';
 import authRoutes from './routes/auth.js';
-import quizRoutes from './routes/quizRoutes.js'; // ✅ quiz route import
+import quizRoutes from './routes/quizRoutes.js';
 
 dotenv.config();
 const app = express();
@@ -13,12 +13,11 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 app.use(cookieParser());
-
-app.use('/api/auth', authRoutes); // ✅ existing auth route
-app.use('/api/quizzes', quizRoutes); // ✅ quiz route added
+app.use('/api/auth',authRoutes);
+app.use('/api/courses',courseRoutes);
+app.use('/api/quizzes',quizRoutes);
 
 const MONGO_URI = process.env.MONGO_URI;
-
 mongoose.connect(MONGO_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,

@@ -26,9 +26,9 @@ export const Banner = () => {
       <CarouselItem>
         <img src={slide3} alt="second slide" />
         <CarouselCaption>
-          <h2>Test Your Knowledge</h2>
+          <h4>Test Your Knowledge</h4>
           <p>Take quizzes and improve your coding skills.</p>
-          <Button variant="success" as={Link} to="/select-language">
+          <Button className="quiz-btn" variant="success" as={Link} to="/select-language">
             Take a Quiz
           </Button>
 

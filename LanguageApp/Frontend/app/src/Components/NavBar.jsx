@@ -5,9 +5,12 @@ import logo from "../assets/logo.png";
 import "./NavBar.css";
 import { Link } from "react-router-dom";
 import { MoonFill, Search } from "react-bootstrap-icons";
+
+
 export const NavBar = () => {
   const [activeLink, setActiveLink] = useState("home");
   const [scrolled, seScrolled] = useState(false);
+
 
   useEffect(() => {
     const onScroll = () => {
@@ -18,7 +21,6 @@ export const NavBar = () => {
       }
     };
 
-    
     window.addEventListener("scroll", onScroll);
 
     return () => window.removeEventListener("scroll", onScroll);
@@ -27,6 +29,7 @@ export const NavBar = () => {
   const onUpdateActiveLink = (value) => {
     setActiveLink(value);
   };
+
   return (
     <Navbar expand="lg" className="navbar1">
       <Container>
@@ -41,22 +44,44 @@ export const NavBar = () => {
               <Search size={18} />
             </span>
           </div>
+
+          <Link to="/courses" className="courses-link">
+            <button className="courses-button">Courses</button>
+          </Link>
+          
+          <Link to="/select-language" className="quiz-link">
+            <button className="quiz-button">Quiz</button>
+          </Link>
+
+          {/*yha dark/light theme vala option add krna h*/}
+
           <div className="right-items">
             <span className="moon">
               <MoonFill size={25} />
             </span>
-            <span className="nav-buttons">
-              <button className="login-button">
-                <Link to="/login" className="navbar-link">
-                  <span>Login</span>
-                </Link>
-              </button>
-              <button className="sign-button">
-                <Link to="/signup" className="navbar-link">
-                  <span>Sign Up</span>
-                </Link>
-              </button>
-            </span>
+          
+          {/* Display user information */}
+{/*         
+              <div className="profile-section">
+                <span className="username">Welcome, {user.name}</span>
+                <button className="logout-button" onClick={handleLogout}>
+                  Logout
+                </button>
+              </div>
+             */}
+              <span className="nav-buttons">
+                <button className="login-button">
+                  <Link to="/login" className="navbar-link">
+                    <span>Login</span>
+                  </Link>
+                </button>
+                <button className="sign-button">
+                  <Link to="/signup" className="navbar-link">
+                    <span>Sign Up</span>
+                  </Link>
+                </button>
+              </span>
+         
           </div>
         </Navbar.Collapse>
       </Container>

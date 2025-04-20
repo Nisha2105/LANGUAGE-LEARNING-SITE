@@ -1,7 +1,6 @@
 import React from 'react';
 import { NavBar } from '../components/Navbar';
 import {Banner} from '../components/Banner';
-import {Navbar2} from '../components/Navbar2';
 import MyCards from '../components/MyCards';
 import Footer from '../components/Footer';
 // import CodeEditor from '../components/CodeEditor';
@@ -12,7 +11,6 @@ function Home() {
     <>
       <div className="home">
         <NavBar />
-        <Navbar2/>
         <Banner />
         <MyCards/>
         {/* <CodeEditor/> */}
