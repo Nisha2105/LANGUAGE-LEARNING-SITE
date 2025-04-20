@@ -11,10 +11,12 @@ const QuizPage = () => {
   const [showResult, setShowResult] = useState(false);
   const [score, setScore] = useState(0);
 
+  const decodedLang = decodeURIComponent(language); // ✅ correct decoding
+
   useEffect(() => {
     const fetchQuiz = async () => {
       try {
-        const res = await fetch(`http://localhost:5000/api/quizzes/${language.toUpperCase()}`);
+        const res = await fetch(`http://localhost:5000/api/quizzes/${language}`);
         const data = await res.json();
         setQuestions(data.questions || []);
       } catch (err) {
@@ -23,7 +25,7 @@ const QuizPage = () => {
     };
     fetchQuiz();
   }, [language]);
-
+  
   const handleOptionSelect = (option) => {
     setSelectedOptions({
       ...selectedOptions,
@@ -67,28 +69,28 @@ const QuizPage = () => {
     return (
       <div className="result-page">
         <div className="result">
-        <h2>Quiz Completed!</h2>
-        <p>Your Score: {score} / {questions.length}</p>
-        <hr />
-        <h3>Review Answers:</h3>
-        {questions.map((q, index) => {
-          const userAnswer = selectedOptions[index];
-          const isCorrect = userAnswer === q.answer;
-          return (
-            <div key={index} className="review-question">
-              <p><strong>Q{index + 1}: {q.question}</strong></p>
-              <p>Your Answer: {userAnswer || <i>Unattempted</i>}</p>
-              <p>Correct Answer: {q.answer}</p>
-              <p style={{ color: isCorrect ? "green" : userAnswer ? "red" : "gray" }}>
-                {isCorrect ? "✔ Correct" : userAnswer ? "❌ Incorrect" : "⏳ Not Attempted"}
-              </p>
-              <hr />
-            </div>
-          );
-        })}
-        <button onClick={handleRestart}>Try Again</button>
-        <button onClick={() => navigate("/select-language")}>Back to Languages</button>
-      </div>
+          <h2>Quiz Completed!</h2>
+          <p>Your Score: {score} / {questions.length}</p>
+          <hr />
+          <h3>Review Answers:</h3>
+          {questions.map((q, index) => {
+            const userAnswer = selectedOptions[index];
+            const isCorrect = userAnswer === q.answer;
+            return (
+              <div key={index} className="review-question">
+                <p><strong>Q{index + 1}: {q.question}</strong></p>
+                <p>Your Answer: {userAnswer || <i>Unattempted</i>}</p>
+                <p>Correct Answer: {q.answer}</p>
+                <p style={{ color: isCorrect ? "green" : userAnswer ? "red" : "gray" }}>
+                  {isCorrect ? "✔ Correct" : userAnswer ? "❌ Incorrect" : "⏳ Not Attempted"}
+                </p>
+                <hr />
+              </div>
+            );
+          })}
+          <button onClick={handleRestart}>Try Again</button>
+          <button onClick={() => navigate("/select-language")}>Back to Languages</button>
+        </div>
       </div>
     );
   }
@@ -98,39 +100,38 @@ const QuizPage = () => {
 
   return (
     <div className="quiz-page">
-    <div className="quiz-container">
-      <h2>{language} Quiz</h2>
-      <h4>Question {current + 1} of {questions.length}</h4>
-  
-      <div className="question-card">
-        <p><strong>{currentQ.question}</strong></p>
-        {currentQ.options.map((option, idx) => (
-          <div key={idx} className="option">
-            <label>
-              <input
-                type="radio"
-                name={`question-${current}`}
-                value={option}
-                checked={selected === option}
-                onChange={() => handleOptionSelect(option)}
-              />
-              {option}
-            </label>
-          </div>
-        ))}
-      </div>
-  
-      <div className="nav-buttons">
-        <button onClick={handlePrev} disabled={current === 0}>Previous</button>
-        {current < questions.length - 1 ? (
-          <button onClick={handleNext}>Next</button>
-        ) : (
-          <button onClick={handleSubmit}>Submit</button>
-        )}
+      <div className="quiz-container">
+        <h2>{decodedLang} Quiz</h2>
+        <h4>Question {current + 1} of {questions.length}</h4>
+
+        <div className="question-card">
+          <p><strong>{currentQ.question}</strong></p>
+          {currentQ.options.map((option, idx) => (
+            <div key={idx} className="option">
+              <label>
+                <input
+                  type="radio"
+                  name={`question-${current}`}
+                  value={option}
+                  checked={selected === option}
+                  onChange={() => handleOptionSelect(option)}
+                />
+                {option}
+              </label>
+            </div>
+          ))}
+        </div>
+
+        <div className="nav-buttons">
+          <button onClick={handlePrev} disabled={current === 0}>Previous</button>
+          {current < questions.length - 1 ? (
+            <button onClick={handleNext}>Next</button>
+          ) : (
+            <button onClick={handleSubmit}>Submit</button>
+          )}
+        </div>
       </div>
     </div>
-  </div>
-  
   );
 };
 

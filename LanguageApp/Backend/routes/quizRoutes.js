@@ -5,7 +5,10 @@ const router = express.Router();
 
 router.get('/:language', async (req, res) => {
   try {
-    const quiz = await Quiz.findOne({ language: req.params.language });
+    const decodedLang = decodeURIComponent(req.params.language);
+    console.log("Decoded language:", decodedLang);
+
+    const quiz = await Quiz.findOne({ language: decodedLang }); // No uppercase here
     if (!quiz) {
       return res.status(404).json({ message: 'Quiz not found' });
     }
