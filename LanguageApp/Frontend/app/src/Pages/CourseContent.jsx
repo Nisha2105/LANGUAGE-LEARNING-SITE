@@ -1,21 +1,21 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-import Footer from '../components/Footer';
 import "./CourseContent.css";
+import Footer from '../components/Footer';
 
 const CourseContent = () => {
-  const { id } = useParams();  
+  const { id } = useParams();
   const [course, setCourse] = useState(null);
   const [loading, setLoading] = useState(true);
   const [selectedLessonIndex, setSelectedLessonIndex] = useState(0);
-
   useEffect(() => {
     const fetchCourse = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/api/courses/${id}`);
+        const response = await axios.get(
+          `http://localhost:5000/api/courses/${id}`
+        );
         setCourse(response.data);
-        setSelectedLessonIndex(0);  
       } catch (error) {
         console.error("Error fetching course:", error);
       } finally {
@@ -30,6 +30,9 @@ const CourseContent = () => {
   if (!course) return <p>Course not found</p>;
 
   const selectedLesson = course.lessons[selectedLessonIndex];
+
+  const { courseTitle } = useParams();
+
 
   return (
     <>
@@ -58,7 +61,6 @@ const CourseContent = () => {
           dangerouslySetInnerHTML={{ __html: selectedLesson.content }}
         ></div>
       </main>
-      
     </div>
     <Footer/>
     </>

@@ -13,8 +13,8 @@ const languages = [
   { name: 'SQL', tagline: 'Query your data' },
   { name: 'MYSQL', tagline: 'Popular RDBMS' },
   { name: 'MONGODB', tagline: 'The NoSQL Powerhouse' },
-  { name: 'REACT.JS', tagline: 'Modern UI framework' },
-  { name: 'NODE.JS', tagline: 'JS on the server' },
+  { name: 'REACTJS', tagline: 'Modern UI framework' },
+  { name: 'NODEJS', tagline: 'JS on the server' },
   { name: 'DJANGO', tagline: 'Python web magic' },
   { name: 'DSA', tagline: 'Crack coding rounds' }
 ];
@@ -28,7 +28,8 @@ const SelectLanguage = () => {
 
   return (
     <div className="select-language-container">
-      <h2>Select a Language</h2>
+      <h2>📚Boost your coding skills!</h2>
+      <h4>Select a programming language below and put your skills to the test with our interactive quiz!</h4>
       <div className="language-grid">
         {languages.map((lang) => (
           <div key={lang.name} className="language-card" onClick={() => handleSelect(lang.name)}>

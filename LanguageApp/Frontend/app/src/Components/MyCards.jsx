@@ -41,12 +41,12 @@ const MyCards = () => (
       <Row className="g-4">
         {courses.map((course, idx) => (
           <Col md={3} key={idx}>
-            <Card className={`custom-card ${idx % 2 === 0 ? 'light-card' : 'dark-card'}`}>
+            <Card>
               <Card.Img variant="top" src={course.img} className="card-img" />
               <Card.Body>
                 <Card.Title>{course.title}</Card.Title>
                 <Card.Text>{course.text}</Card.Text>
-                <Button variant="primary">
+                <Button>
                   <Link to={course.link} className="button-class">Get Started</Link>
                 </Button>
               </Card.Body>

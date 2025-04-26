@@ -18,7 +18,7 @@ const DebugGameCard = () => {
         <Card.Text>
           Find and fix bugs in code! Select your language and get started.
         </Card.Text>
-        <Form.Select
+        <Form.Select className='debug-lang'
           value={gameLanguage}
           onChange={(e) => setGameLanguage(e.target.value)}
         >

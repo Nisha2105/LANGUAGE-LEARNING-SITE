@@ -88,8 +88,10 @@ const QuizPage = () => {
               </div>
             );
           })}
+          <div className="result-buttons">
           <button onClick={handleRestart}>Try Again</button>
           <button onClick={() => navigate("/select-language")}>Back to Languages</button>
+        </div>
         </div>
       </div>
     );
