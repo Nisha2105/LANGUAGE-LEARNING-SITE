@@ -43,8 +43,9 @@
 }
 
 .debug-card button {
-  background: linear-gradient(135deg, #7b8fb8, #2b3854);
-  color: white;
+  /*background: linear-gradient(135deg, #7b8fb8, #2b3854);*/
+  background-color: var(--background-color);
+  color: var(--text-color);
   font-weight: bold;
   padding: 10px 15px;
   border: none;
@@ -55,7 +56,8 @@
 }
 
 .debug-card button:hover {
-  background-color: #0b5ed7;
+  background-color: var(--background-color);
+  color: var(--text-color);
   transform: scale(1.03);
 }
 

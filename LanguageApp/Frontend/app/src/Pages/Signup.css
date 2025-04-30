@@ -5,15 +5,14 @@
   text-align: center;
   height: 100vh;
   width: 100vw; 
-  background-image: url('../assets/blue-bg.webp');
-  background-size: cover;
+  background-color: var(--background-color);
 }
 .signup form{
   text-align: centre;
   padding: 20px;
   margin-top: 80px;
   border-radius: 10px;
-  background: rgba(0,0,0,0.4);
+  background: var(--navy-color);
   box-shadow: 0 4px 6px rgba(0,0,0,0.7);
   width: 550px;
   height: 450px;
@@ -24,7 +23,7 @@
   margin-top: 35px;
   justify-content: center;
   text-align: center;
-  color: #f5f2f2;
+  color: beige;
   margin-bottom: 16px;
   font-weight: bold;
 }
@@ -41,12 +40,12 @@
   border: none;
   border-radius: 5px;
   background: rgba(255,255,255,0.6);
-  color: black;
+  color: var(--text-color);
   font-size: 16px;
   font-weight: bold;
 }
 .signup input::placeholder{
-  color: black;
+  color: rgb(10, 10, 10);
 }
 .signup button{
   width: 100%;
@@ -55,7 +54,7 @@
   font-weight: bold;
   border-radius: 5px;
   background: rgba(255, 255, 255, 0.9);
-  color: black;
+  color: var(--text-color);
   font-size: 16px;
   cursor: pointer;
   transition: 0.3s;

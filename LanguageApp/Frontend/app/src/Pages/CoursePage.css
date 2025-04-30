@@ -2,14 +2,15 @@
   min-width: 80vw;
   padding: 3rem 1rem;
   text-align: center;
-  background-image: url('../assets/game-bg3.webp');
+  background-color: var(--background-color);
+ /* background-image: url('../assets/game-bg3.webp');*/
   background-size: cover;
 }
 
 .course-list h2 {
   margin-top: 80px;
   font-size: 2.5 rem;
-  color: #e5e7eb;
+  color: var(--text-color);
   font-weight: 500;
 }
 
@@ -22,7 +23,8 @@ margin-top: 30px;
 }
 
 .course-card {
-  background: linear-gradient(135deg, #629cb9, #0c1542);
+  /*background: linear-gradient(135deg, #629cb9, #0c1542);*/
+  background: linear-gradient(135deg, #0e1a3b, #0e1a3b);
   border-radius: 12px;
   padding: 1.5rem;
   cursor: pointer;
@@ -34,6 +36,7 @@ margin-top: 30px;
 .course-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+  background: linear-gradient(135deg,  #0c1542, #186e98);
 }
 
 .course-card h3 {
@@ -52,8 +55,8 @@ margin-top: 30px;
 }
 
 .start-btn {
-  background: linear-gradient(135deg, #3460be, #010b21); /* blue gradient */
-  color: white;
+  background: linear-gradient(135deg, #f5f7fa, #f1f4f8); /* blue gradient */
+  color: var(--text-color);
   padding: 0.7rem 1.6rem;
   border: none;
   border-radius: 999px;
@@ -68,7 +71,7 @@ margin-top: 30px;
 }
 
 .start-btn:hover {
-  background: linear-gradient(135deg, #2a2a2b, #81a1fa);
+  /*background: linear-gradient(135deg, #2a2a2b, #81a1fa);*/
   transform: scale(1.05);
   box-shadow: 0 6px 18px rgba(37, 99, 235, 0.4);
 }

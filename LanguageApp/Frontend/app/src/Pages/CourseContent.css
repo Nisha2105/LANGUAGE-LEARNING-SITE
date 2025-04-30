@@ -1,15 +1,24 @@
+:root {
+  --background-color: #f7f3eb;
+  --navy-color: #0e1a3b;
+  --accent-color: #f54777;
+  --button-color: #0d1435;
+  --text-color: #111111;
+}
+
 .course-container {
   display: flex;
   height: 100vh;
   margin-top: 111px;
   font-family: 'Poppins', sans-serif;
- 
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
 /* Sidebar */
 .sidebar {
   width: 260px;
-  background: linear-gradient(to bottom, #0a040f, #042864);
+  background-color: var(--navy-color);
   color: white;
   padding: 20px 0;
   overflow-y: auto;
@@ -44,7 +53,7 @@
 }
 
 .sidebar li.active {
-  background: #5762e1;
+  background: var(--accent-color);
   color: #fff;
   font-weight: bold;
 }
@@ -54,118 +63,117 @@
   flex: 1;
   padding: 20px;
   overflow-y: auto;
-  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.03);
-  color: #f6f2f2;
+  background-color: var(--background-color);
 }
 
-/* Wrapper container */
 .lesson-content .rendered-html {
-font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-color: #f5f2f2;
-background-color: rgba(255, 255, 255, 0.2);
-padding: 10px;
-line-height: 1.7;
-width: 78vw;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ffffff;
+  color: var(--text-color);
+  padding: 20px;
+  border-radius: 10px;
+  width: 78vw;
+  line-height: 1.7;
 }
 
 /* Headings */
 .lesson-content .rendered-html h1,
 .lesson-content .rendered-html h2,
 .lesson-content .rendered-html h3 {
-color: #bcd6f0;
-margin-top: 20px;
-margin-bottom: 10px;
+  color: var(--navy-color);
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
 
 .lesson-content .rendered-html h1 {
-font-size: 28px;
-border-bottom: 2px solid #ccc;
-padding-bottom: 6px;
+  font-size: 28px;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 6px;
 }
 
 .lesson-content .rendered-html h2 {
-font-size: 24px;
+  font-size: 24px;
 }
 
 .lesson-content .rendered-html h3 {
-font-size: 20px;
+  font-size: 20px;
 }
 
 /* Paragraphs */
 .lesson-content .rendered-html p {
-font-size: 16px;
-margin-bottom: 12px;
+  font-size: 16px;
+  margin-bottom: 12px;
 }
 
 /* Lists */
 .lesson-content .rendered-html ul,
 .lesson-content .rendered-html ol {
-margin-left: 20px;
-padding-left: 15px;
+  margin-left: 20px;
+  padding-left: 15px;
 }
 
 .lesson-content .rendered-html li {
-margin-bottom: 8px;
+  margin-bottom: 8px;
 }
 
 /* Code blocks */
 .lesson-content .rendered-html code {
-font-family: "Courier New", Courier, monospace;
-background-color: rgba(255, 255, 255, 1.0);
-padding: 4px 4px;
-color: #0e0d0d;
+  font-family: "Courier New", Courier, monospace;
+  background-color: #efefef;
+  padding: 4px 4px;
+  color: var(--text-color);
 }
 
 .lesson-content .rendered-html pre {
-background-color: rgba(255, 255, 255, 0.3);
-padding: 10px;
-border-left: 4px solid #ccc;
-overflow-x: auto;
-margin-bottom: 16px;
-white-space: pre-wrap;
+  background-color: #ececec;
+  padding: 10px;
+  border-left: 4px solid var(--navy-color);
+  overflow-x: auto;
+  margin-bottom: 16px;
+  white-space: pre-wrap;
 }
 
 /* Links */
 .lesson-content .rendered-html a {
-color: #007bff;
-text-decoration: none;
+  color: var(--accent-color);
+  text-decoration: none;
 }
 
 .lesson-content a:hover {
-text-decoration: underline;
+  text-decoration: underline;
 }
 
 /* Tables */
 .lesson-content table {
-border-collapse: collapse;
-width: 100%;
-margin-top: 15px;
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 15px;
 }
 
 .lesson-content table,
 .lesson-content th,
 .lesson-content td {
-border: 1px solid #ddd;
+  border: 1px solid #ddd;
 }
 
 .lesson-content th,
 .lesson-content td {
-padding: 10px;
-text-align: left;
+  padding: 10px;
+  text-align: left;
 }
 
 .lesson-content .rendered-html th {
-background-color: #827d7d;
+  background-color:var(--navy-color);
+  color: var(--background-color);
 }
 
 .lesson-content .description {
   font-size: 16px;
-  color: #f8f3f3;
+  color: var(--text-color);
   margin-bottom: 25px;
 }
 
-
-/* Scrollbars (nice touch) */
+/* Scrollbars */
 .sidebar::-webkit-scrollbar,
 .lesson-content::-webkit-scrollbar {
   width: 6px;
@@ -187,7 +195,7 @@ background-color: #827d7d;
     width: 100%;
     height: auto;
     box-shadow: none;
-    border-bottom: 2px solid #2575fc;
+    border-bottom: 2px solid var(--accent-color);
   }
 
   .lesson-content {
