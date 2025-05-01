@@ -2,11 +2,10 @@ import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
 import { Dropdown } from "react-bootstrap";
 import { useState, useEffect } from "react";
-import logo from "../assets/logo.png";
+import logo from "../assets/logo1.png";
 import "./NavBar.css";
 import { Link, useNavigate } from "react-router-dom";
 import { MoonFill, Search } from "react-bootstrap-icons";
-
 
 export const NavBar = () => {
   const [user, setUser] = useState(null);

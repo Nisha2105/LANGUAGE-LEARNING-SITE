@@ -20,7 +20,7 @@
   height: calc(100vh - 80px);
   min-width: 800px;
   margin: 121px;
-  background-color: rgba(255, 255, 255, 0.8); /* lighter overlay */
+  background-color: var(--navy-color); /* lighter overlay */
   padding: 30px;
   border-radius: 20px;
   box-shadow: 0 0 20px rgba(0,0,0,0.3);
@@ -34,7 +34,7 @@
   text-align: center;
   margin-bottom: 20px;
   font-size: 28px;
-  color: var(--navy-color);
+  color: var(--background-color);
   font-weight: bold;
 }
 

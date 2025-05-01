@@ -1,6 +1,7 @@
 import React,{useState} from 'react';
 import '../pages/Signup.css';
-
+import { Link } from 'react-router-dom';
+import login from '../pages/Login.jsx';
 
 const Signup = () => {
 
@@ -67,7 +68,7 @@ const Signup = () => {
                 </div>
                 <button type='submit' disabled={loading}>{loading ? 'Signing up...' : 'Submit'}</button>
                 <div className='login-option'>
-                    <p>Already have an account? LOGIN</p>
+                    <p>Already have an account?<Link to={`/login`} className='login-link' >  LOGIN</Link> </p>
                 </div>
             </form>
         </div>

@@ -50,7 +50,7 @@ nav.navbar2 {
 .navbar2 .navbar-link:hover,
 .navbar2 .navbar-link.active {
     opacity: 2;
-    
+    color: var(--accent-color);
 }
 
 

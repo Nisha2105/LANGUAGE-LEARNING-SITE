@@ -12,11 +12,13 @@
   padding: 40px;
   height: 100vh;
   min-width: 100vw;
+  background-image: url('../assets/carousel2.jpg');
+  background-size: cover;
   background-color: var(--background-color);
   color: var(--text-color);
   border-radius: 20px;
   box-shadow: 0 0 20px rgba(0,0,0,0.1);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
 }
 
 /* Full screen background area */
@@ -34,11 +36,13 @@
   height: calc(100vh - 80px);
   max-width: 800px;
   margin: 0 auto;
-  background-color: rgba(14, 26, 59, 0.05); /* light navy tint */
+  background-color: rgba(13, 20, 53, 0.35); /* light navy tint */
+  backdrop-filter: blur(25px); 
+    -webkit-backdrop-filter: blur(10px);
   padding: 30px;
   border-radius: 20px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  color: var(--text-color);
+  color: var(--background-color);
   margin-bottom: 40px;
   overflow-y: auto;
   scroll-behavior: smooth;
@@ -46,7 +50,7 @@
 
 /* Question card */
 .question-card {
-  background: rgba(14, 26, 59, 0.08); /* light navy background */
+  background: var(--background-color); /* light navy background */
   border-left: 6px solid var(--navy-color);
   padding: 25px;
   border-radius: 16px;
@@ -98,7 +102,7 @@ input[type="radio"] {
 
 .quiz-nav-buttons button {
   background-color: var(--button-color);
-  color: var(--background-color);
+  color: var(--background-colorr);
   padding: 12px 28px;
   border: none;
   border-radius: 10px;
@@ -109,7 +113,8 @@ input[type="radio"] {
 }
 
 .quiz-nav-buttons button:hover {
-  background-color: var(--accent-color);
+  background-color: var(--background-color);
+  color: var(--text-color);
   transform: scale(1.05);
   box-shadow: 0 6px 18px rgba(245, 71, 119, 0.4);
 }
@@ -128,16 +133,18 @@ input[type="radio"] {
 .result {
   max-width: 800px;
   margin: 0 auto;
-  background-color: rgba(14, 26, 59, 0.05);
+  background-color: rgba(13, 20, 53, 0.35); /* light navy tint */
+  backdrop-filter: blur(25px); 
+    -webkit-backdrop-filter: blur(10px);
   padding: 30px;
   border-radius: 20px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  color: var(--text-color);
+  color: var(--background-color);
   margin-bottom: 40px;
 }
 
 .review-question {
-  background: rgba(14, 26, 59, 0.05);
+  background: var(--background-color);
   border-left: 6px solid var(--navy-color);
   padding: 18px;
   border-radius: 14px;
@@ -170,7 +177,8 @@ input[type="radio"] {
 }
 
 .result-buttons button:hover {
-  background-color: var(--accent-color);
+  background-color: var(--background-color);
+  color: var(--text-color);
   transform: scale(1.05);
   box-shadow: 0 6px 18px rgba(245, 71, 119, 0.4);
 }
